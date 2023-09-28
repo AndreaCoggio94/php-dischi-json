@@ -46,6 +46,7 @@
           v-for="(disk, index) in disks"
           class="card m-2"
           style="width: 18rem"
+          @click="openDisk(index)"
         >
           <img class="card-img-top" :src="disk.poster" alt="Card image cap" />
           <div class="card-body text-center">
@@ -53,6 +54,9 @@
             <p class="card-text">{{disk.author}}</p>
             <h6 class="card-subtitle mb-2 text-muted">{{disk.year}}</h6>
           </div>
+        </div>
+        <div :class="hidden">
+          <img :src="hiddenDisk.poster" alt="" />
         </div>
       </div>
     </div>
