@@ -41,15 +41,17 @@
   </head>
   <body data-bs-theme="dark">
     <div id="app">
-      <div class="container">
-        <div class="disk-container">
-          <div v-for="disk in disks" class="card">
-            <div class="card-image">
-              <img :src="disk.poster" alt="" />
-            </div>
-            <h1>{{ disk.title}}</h1>
-            <p>{{disk.author}}</p>
-            <h4>{{disk.year}}</h4>
+      <div class="container disk-container mt-2">
+        <div
+          v-for="(disk, index) in disks"
+          class="card m-2"
+          style="width: 18rem"
+        >
+          <img class="card-img-top" :src="disk.poster" alt="Card image cap" />
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ disk.title}}</h5>
+            <p class="card-text">{{disk.author}}</p>
+            <h6 class="card-subtitle mb-2 text-muted">{{disk.year}}</h6>
           </div>
         </div>
       </div>
