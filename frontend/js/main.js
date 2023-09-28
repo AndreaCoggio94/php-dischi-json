@@ -3,19 +3,19 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      disc: [],
+      disk: [],
     };
   },
   mounted() {
     axios
       .get("http://localhost/php-dischi-json/backend/server.php")
       .then((response) => {
-        const apiDisc = response.data.map((disc) => {
-          console.log(disc);
-          const { title, genre, author, poster, year } = disc;
+        const apiDisk = response.data.map((disk) => {
+          console.log(disk);
+          const { title, genre, author, poster, year } = disk;
           return { title, genre, author, poster, year };
         });
-        this.disc = apiDisc;
+        this.disk = apiDisk;
       });
   },
 }).mount("#app");
