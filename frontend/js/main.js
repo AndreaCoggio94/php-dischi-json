@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      disk: [],
+      disks: [],
     };
   },
   mounted() {
@@ -15,7 +15,7 @@ createApp({
           const { title, genre, author, poster, year } = disk;
           return { title, genre, author, poster, year };
         });
-        this.disk = apiDisk;
+        this.disks = apiDisk;
       });
   },
 }).mount("#app");
