@@ -56,7 +56,18 @@
           </div>
         </div>
         <div :class="hidden">
-          <img :src="hiddenDisk.poster" alt="" />
+          <div class="card card-hidden">
+            <img
+              class="card-img-top"
+              :src="hiddenDisk.poster"
+              alt="Card image cap"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">{{ hiddenDisk.title}}</h5>
+              <p class="card-text">{{hiddenDisk.author}}</p>
+              <h6 class="card-subtitle mb-2 text-muted">{{hiddenDisk.year}}</h6>
+            </div>
+          </div>
         </div>
       </div>
     </div>
