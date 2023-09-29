@@ -11,7 +11,7 @@ createApp({
   },
   mounted() {
     axios.get(this.apiUrl).then((response) => {
-      console.log(response);
+      // console.log(response);
       // const apiDisk = response.data.map((disk) => {
       //   const { title, genre, author, poster, year } = disk;
       //   return { title, genre, author, poster, year };
@@ -29,7 +29,7 @@ createApp({
 
       axios.get(this.apiUrl, diskIndex).then((response) => {
         console.log(response);
-        // this.hiddenDisk = response.data[index];
+        this.hiddenDisk = response.data;
       });
       this.hidden = "absolute";
     },

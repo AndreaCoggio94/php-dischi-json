@@ -6,7 +6,7 @@ $string = file_get_contents("./data/dischi.json");
 // var_dump($string);
 $disk_list = json_decode($string, true) ;
 $result = [];
-var_dump($disk_list);
+// var_dump($disk_list);
 
 if(isset($_GET["index"])) {
 
@@ -18,7 +18,7 @@ if(isset($_GET["index"])) {
 
 
 header('Content-Type: application/json');
-// echo json_encode($result);
+echo json_encode($result);
 
 
 
